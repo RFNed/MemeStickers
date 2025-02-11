@@ -40,8 +40,7 @@ async def jalkod(result: types.ChosenInlineResult):
             await cursor.execute(
                 "UPDATE stickers SET s4et = s4et + 1 WHERE id = %s",
                 (result.result_id,)
-            )
-            await conn.commit()                 
+            )              
 
 @dp.inline_query()
 async def inline_result(query: types.InlineQuery):
